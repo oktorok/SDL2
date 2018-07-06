@@ -19,10 +19,6 @@ typedef struct s_sdl {
 		SDL_Window *window;
 		SDL_Renderer *Renderer;
 	} screen;
-	struct {
-		unsigned int n;
-		SDL_Surface ** spritesheet;
-	} gfx;
 	void (*init)(struct s_sdl *);
 	void (*quit)(struct s_sdl *);
 } t_sdl;
