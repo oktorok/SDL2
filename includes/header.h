@@ -11,6 +11,7 @@
 #define SCREEN_NAME "Prototype"
 
 typedef struct s_sdl {
+	int		flags;
 	SDL_bool running;
 	struct {
 		unsigned int w;
@@ -25,4 +26,5 @@ typedef struct s_sdl {
 
 void	game_init(t_sdl *Game);
 void	game_quit(t_sdl *Game);
+int		check_flags(int flags, char flag);
 #endif

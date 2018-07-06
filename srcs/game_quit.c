@@ -1,4 +1,4 @@
-#include "header.h"
+#include "../includes/header.h"
 
 void game_quit(t_sdl *Game)
 {

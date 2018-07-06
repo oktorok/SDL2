@@ -8,7 +8,8 @@ CFLAGS =
 SDLFLAGS = -lSDL2
 SRC =	game_init.c \
 		game_quit.c \
-		main.c
+		main.c \
+		check_flags.c
 HEADERS = header.h
 
 HEADERS_PATH = $(patsubst %.h, $(INCLUDES_DIR)%.h, $(HEADERS))

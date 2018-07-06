@@ -1,4 +1,4 @@
-#include "header.h"
+#include "../includes/header.h"
 #include "unistd.h"
 
 void game_init(t_sdl *Game)
@@ -15,7 +15,7 @@ void game_init(t_sdl *Game)
 		printf("SDL error -> %s\n", SDL_GetError());
 		exit(1);
 	}
-	if (SDL_SetWindowFullscreen(Game->screen.window, SDL_WINDOW_FULLSCREEN))
+	if (check_flags(Game->flags, 'f') && SDL_SetWindowFullscreen(Game->screen.window, SDL_WINDOW_FULLSCREEN))
 	{
 		printf("SDL_error -> %s\n", SDL_GetError());
 		exit(1);
