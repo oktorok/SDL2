@@ -9,7 +9,9 @@ SDLFLAGS = -lSDL2
 SRC =	game_init.c \
 		game_quit.c \
 		main.c \
-		flags.c
+		flags.c \
+		change_background.c \
+		draw.c
 HEADERS = header.h
 
 HEADERS_PATH = $(patsubst %.h, $(INCLUDES_DIR)%.h, $(HEADERS))

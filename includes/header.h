@@ -5,8 +5,8 @@
 #define SDL_MAIN_HANDLED
 #include "SDL2/SDL.h"
 
-#define SCREEN_w 2
-#define SCREEN_H 2
+#define SCREEN_w 674
+#define SCREEN_H 286
 #define SCREEN_SCALE 1
 #define SCREEN_NAME "Prototype"
 
@@ -24,6 +24,8 @@ typedef struct s_sdl {
 	void (*quit)(struct s_sdl *);
 } t_sdl;
 
+void	draw(t_sdl *Game);
+void	change_background(t_sdl *Game);
 void	game_init(t_sdl *Game);
 void	game_quit(t_sdl *Game);
 int		check_flags(int flags, char flag);
