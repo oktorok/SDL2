@@ -4,14 +4,16 @@ NAME = tutorial_SDL2
 SRC_DIR = srcs/
 INCLUDES_DIR = includes/
 OBJ_DIR = objects/
-CFLAGS =
-SDLFLAGS = -lSDL2
+CFLAGS = `sdl2-config --cflags`
+SDLFLAGS = `sdl2-config --libs` -lSDL2_ttf
 SRC =	game_init.c \
 		game_quit.c \
 		main.c \
 		flags.c \
 		change_background.c \
-		draw.c
+		draw.c \
+		texto.c
+
 HEADERS = header.h
 
 HEADERS_PATH = $(patsubst %.h, $(INCLUDES_DIR)%.h, $(HEADERS))

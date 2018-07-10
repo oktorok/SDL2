@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define SDL_MAIN_HANDLED
-#include "SDL2/SDL.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 
 #define SCREEN_w 674
 #define SCREEN_H 286
@@ -24,6 +25,7 @@ typedef struct s_sdl {
 	void (*quit)(struct s_sdl *);
 } t_sdl;
 
+void	texto(t_sdl *Game);
 void	draw(t_sdl *Game);
 void	change_background(t_sdl *Game);
 void	game_init(t_sdl *Game);

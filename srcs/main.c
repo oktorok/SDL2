@@ -38,6 +38,11 @@ int	main(int argn, char **argv)
 					printf("Ejecutar dibujado\n");
 					SDL_RenderPresent(Game.screen.Renderer);
 				}
+				else if (event.key.keysym.sym == SDLK_t)
+				{
+					printf("Escribiendo texto\n");
+					texto(&Game);
+				}
 			}
 		}
 		//	SDL_RenderPresent(Game.screen.Renderer);
